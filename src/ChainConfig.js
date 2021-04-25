@@ -1,10 +1,18 @@
 var config = {
-  core_asset: "CORE",
-  address_prefix: "GPH",
+  // core_asset: "CORE",
+  core_asset: "CWD",
+  // address_prefix: "GPH",
+  address_prefix: "CWD",
   expire_in_secs: 15,
   expire_in_secs_proposal: 24 * 60 * 60,
   review_in_secs_committee: 24 * 60 * 60,
   networks: {
+    Crowdwiz: {
+      core_asset: "CWD",
+      address_prefix: "CWD",
+      chain_id:
+        "4bb7d961ed2ed1b2b618711b1bd4d8d905abe061fcb9c79d1ba15468eadfa998"
+    },
     BitShares: {
       core_asset: "BTS",
       address_prefix: "BTS",
@@ -51,15 +59,15 @@ var config = {
   },
 
   reset: () => {
-    config.core_asset = "CORE";
-    config.address_prefix = "GPH";
+    config.core_asset = "CWD";
+    config.address_prefix = "CWD";
     config.expire_in_secs = 15;
     config.expire_in_secs_proposal = 24 * 60 * 60;
 
     console.log("Chain config reset");
   },
 
-  setPrefix: (prefix = "GPH") => (config.address_prefix = prefix)
+  setPrefix: (prefix = "CWD") => (config.address_prefix = prefix)
 };
 
 export default config;
